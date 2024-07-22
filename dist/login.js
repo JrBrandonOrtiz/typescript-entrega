@@ -7,14 +7,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { CrudUsers } from "./controllers/controllers.user.js";
+import { UsersCrud } from "./controllers/controllers.user.js";
 const URL_USERS = "http://190.147.64.47:5155/api/v1";
 const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 form.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
-    const crudUsers = new CrudUsers(URL_USERS);
+    const crudUsers = new UsersCrud(URL_USERS);
     const respuesta = yield crudUsers.login(email, password);
     const token = respuesta.data.token;
     if (token) {

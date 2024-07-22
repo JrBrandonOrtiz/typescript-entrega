@@ -1,0 +1,2 @@
+Book Management System
+This project is a simple Book Management System that allows users to log in, view a paginated list of books, add new books, update existing ones, and delete books. The application is built with TypeScript, HTML, and CSS, and it communicates with a backend API.

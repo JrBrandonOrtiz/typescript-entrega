@@ -1,4 +1,4 @@
-import {CrudUsers} from "./controllers/controllers.user.js"
+import {UsersCrud} from "./controllers/controllers.user.js"
 
 const URL_USERS:string = "http://190.147.64.47:5155/api/v1";
 
@@ -8,7 +8,7 @@ const password = document.querySelector("#password") as HTMLInputElement;
 
 form.addEventListener("submit", async(e:Event) => {
     e.preventDefault();
-    const crudUsers = new CrudUsers(URL_USERS);
+    const crudUsers = new UsersCrud(URL_USERS);
     const respuesta = await crudUsers.login(email,password);
     
     const token:string | null = respuesta.data.token;
